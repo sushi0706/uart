@@ -1,7 +1,7 @@
 module uart_rx(input clk_50M,						//main system's 50MHz clock
-					input rx,							//input serial data
-					output reg [7:0] rx_msg,		//output data byte
-					output reg rx_complete);		//high when data received
+	       input rx,						//input serial data
+	       output reg [7:0] rx_msg,					//output data byte
+	       output reg rx_complete);					//high when data received
 					
 	//external parameters 
 	parameter BAUD_RATE=115200;
