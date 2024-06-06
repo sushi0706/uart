@@ -1,13 +1,13 @@
 `timescale 1ns/1ns
 module uart_tb;
 	reg clk = 0;
-   reg tx_en = 0;
-   reg [7:0] data = 0;
+	reg tx_en = 0;
+	reg [7:0] data = 0;
 	wire tx;
 	wire tx_done;
 	
-   reg rx = 1;
-   wire [7:0] rx_msg;
+	reg rx = 1;
+	wire [7:0] rx_msg;
 	wire rx_complete;
 	
 	//takes in input byte and serializes it
