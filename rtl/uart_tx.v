@@ -1,8 +1,8 @@
 module uart_tx(input clk_50M,				//main system's 50MHz clock
-					input tx_en,				//enable to start sending data
-					input [7:0] data,			//input 8 bit data
-					output reg tx,				//output serial data
-					output reg tx_done);		//high when transmission is done
+		input tx_en,				//enable to start sending data
+		input [7:0] data,			//input 8 bit data
+		output reg tx,				//output serial data
+		output reg tx_done);			//high when transmission is done
 	
 	//external parameters 
 	parameter BAUD_RATE=115200;
