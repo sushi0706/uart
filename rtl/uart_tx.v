@@ -15,8 +15,8 @@ module uart_tx(input clk_50M,				//main system's 50MHz clock
 	parameter IDLE=2'b00, START_BIT=2'b01, DATA_BITS=2'b10, STOP_BIT=2'b11;	//FSM states
 	
 	//internal registers
-	reg [1:0] state=IDLE;	//current state
-	reg [10:0] cycle_count;	//counts clock cycles for each bit
+	reg [1:0] state=IDLE;	                //current state
+	reg [10:0] cycle_count;	                //counts clock cycles for each bit
 	reg [3:0] index;			//bit being transmitted
 	
 	always@(posedge clk_50M) begin
