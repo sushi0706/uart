@@ -11,12 +11,12 @@ module uart_rx(input clk_50M,						//main system's 50MHz clock
 	
 	//internal parameters
 	parameter CYCLES_PER_BIT=434;
-	parameter IDLE=2'b00, START=2'b01, DATA=2'b10, STOP=2'b11;		//FSM states
+	parameter IDLE=2'b00, START=2'b01, DATA=2'b10, STOP=2'b11;	//FSM states
 	
 	//internal registers
-	reg [1:0] state=IDLE;					//current state
-	reg [3:0] index;							//bit being received
-	reg [10:0] cycle_count;					//counts clock cycles for each bit
+	reg [1:0] state=IDLE;			//current state
+	reg [3:0] index;			//bit being received
+	reg [10:0] cycle_count;			//counts clock cycles for each bit
 	reg ff_rx_1=1'b1, ff_rx_2=1'b1;		//additional flip flops
 	
 	
